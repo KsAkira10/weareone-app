@@ -1,15 +1,10 @@
 import React from 'react';
+import Pages from './pages/Pages';
 import './App.scss';
 
-const App: React.FC = () => {
+const App: React.FC = (props: object) => {
   return (
-    <>
-      <header>
-        <img src="" alt=""/>
-      </header>
-      <main></main>
-      <footer></footer>
-    </>
+    <Pages {...props} />
   );
 }
 
