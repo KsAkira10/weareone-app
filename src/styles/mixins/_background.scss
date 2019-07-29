@@ -1,0 +1,12 @@
+@mixin background($path, $w, $h) {
+  background: url($path) no-repeat;
+  background-size: cover; 
+  width: $w;
+  height: $h;
+}
+
+@mixin over-background($path, $path2, $w, $h) {
+  background: url($path) no-repeat center center, url($path2) no-repeat center center;
+  width: $w;
+  height: $h;
+}

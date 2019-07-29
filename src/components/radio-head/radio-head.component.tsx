@@ -11,9 +11,9 @@ const getLogo = (name: string): string => {
 
 const RadioHead: React.FC<IRadioHead> = ({ src, alt }) => {
   return (
-    <header className="RadioHead">
-      <img src={src} alt={alt} />
-    </header>
+    <section className="radio-head">
+      <img className="img-fluid mx-auto" src={src} alt={alt} />
+    </section>
   );
 };
 

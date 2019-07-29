@@ -1,0 +1,30 @@
+@import '../../styles/styles';
+
+.radio-buttons {
+  @include media-breakpoint-up(xs) { 
+    margin: 60px auto 20px;
+    @include background('../../assets/images/circle/circle_background.png', 124px, 128px);
+  }
+  @include media-breakpoint-up(sm) { 
+    margin: 70px auto 20px;
+    @include background('../../assets/images/circle/circle_background.png', 324px, 328px);
+  }
+
+  .button {
+    &-technobase {
+      @include media-breakpoint-up(xs) { 
+        margin: 60px auto 20px;
+        @include background('../../assets/images/circle/circle_tb.png', 124px, 128px);
+      }
+      @include media-breakpoint-up(sm) { 
+        margin: 70px auto 20px;
+        @include background('../../assets/images/circle/circle_tb.png', 324px, 328px);
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    height: 100%;
+  }
+}

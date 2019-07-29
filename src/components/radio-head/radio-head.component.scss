@@ -1,3 +1,18 @@
-.RadioHead {
-    
+@import '../../styles/styles';
+
+.radio-head {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+
+  img {
+    @include media-breakpoint-up(xs) {
+      width: 200px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      width: 432px;
+    }
+  }
 }
