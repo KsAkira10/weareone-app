@@ -1,30 +1,110 @@
 @import '../../styles/styles';
 
-.radio-buttons {
-  @include media-breakpoint-up(xs) { 
-    margin: 60px auto 20px;
-    @include background('../../assets/images/circle/circle_background.png', 124px, 128px);
-  }
-  @include media-breakpoint-up(sm) { 
-    margin: 70px auto 20px;
-    @include background('../../assets/images/circle/circle_background.png', 324px, 328px);
-  }
-
-  .button {
-    &-technobase {
-      @include media-breakpoint-up(xs) { 
-        margin: 60px auto 20px;
-        @include background('../../assets/images/circle/circle_tb.png', 124px, 128px);
+.radio {
+  &-buttons {
+    @include media-breakpoint-up(xs) { 
+      margin: 60px auto 20px;
+      @include background('../../assets/images/circle/circle_background.png', 124px, 128px);
+    }
+    @include media-breakpoint-up(sm) { 
+      margin: 70px auto 20px;
+      @include background('../../assets/images/circle/circle_background.png', 324px, 328px);
+    }
+  
+    .radio-button {
+      position: relative;
+      opacity: 0;
+      outline: 0;
+      border: 0;
+      padding: 0;
+      &--technobase {
+        @include media-breakpoint-up(xs) {
+          @include background('../../assets/images/circle/circle_tb.png', 42px, 40px);
+          left: 29px;
+          top: 2px;
+        }
+        @include media-breakpoint-up(sm) { 
+          @include background('../../assets/images/circle/circle_tb.png', 108px, 104px);
+          left: 73px;
+          top: 10px;
+        }
       }
-      @include media-breakpoint-up(sm) { 
-        margin: 70px auto 20px;
-        @include background('../../assets/images/circle/circle_tb.png', 324px, 328px);
+      &--hardbase {
+        @include media-breakpoint-up(xs) {
+          @include background('../../assets/images/circle/circle_hb.png', 40px, 42px);
+          left: 31px;
+          top: 8px;
+        }
+        @include media-breakpoint-up(sm) { 
+          @include background('../../assets/images/circle/circle_hb.png', 108px, 104px);
+          left: 73px;
+          top: 10px;
+        }
+      }
+      &--trancebase {
+        @include media-breakpoint-up(xs) {
+          @include background('../../assets/images/circle/circle_trb.png', 36px, 40px);
+          left: 4px;
+          top: 40px;
+        }
+        @include media-breakpoint-up(sm) { 
+          @include background('../../assets/images/circle/circle_trb.png', 108px, 104px);
+          left: 73px;
+          top: 10px;
+        }
+      }
+      &--coretime {
+        @include media-breakpoint-up(xs) {
+          @include background('../../assets/images/circle/circle_ct.png', 40px, 42px);
+          left: 74px;
+          top: 30px;
+        }
+        @include media-breakpoint-up(sm) { 
+          @include background('../../assets/images/circle/circle_ct.png', 108px, 104px);
+          left: 73px;
+          top: 10px;
+        }
+      }
+      &--teatime {
+        @include media-breakpoint-up(xs) {
+          @include background('../../assets/images/circle/circle_tt.png', 40px, 38px);
+          right: 10px;
+          top: 34px;
+        }
+        @include media-breakpoint-up(sm) { 
+          @include background('../../assets/images/circle/circle_tt.png', 108px, 104px);
+          left: 73px;
+          top: 10px;
+        }
+      }
+      &--clubtime {
+        @include media-breakpoint-up(xs) {
+          @include background('../../assets/images/circle/circle_clt.png', 42px, 38px);
+          right: 75px;
+          top: 16px;
+        }
+        @include media-breakpoint-up(sm) { 
+          @include background('../../assets/images/circle/circle_clt.png', 108px, 104px);
+          left: 73px;
+          top: 10px;
+        }
+      }
+      &--housetime {
+        @include media-breakpoint-up(xs) {
+          @include background('../../assets/images/circle/circle_ht.png', 40px, 38px);
+          left: 4px;
+          bottom: 72px;
+        }
+        @include media-breakpoint-up(sm) { 
+          @include background('../../assets/images/circle/circle_ht.png', 104px, 96px);
+          left: 10px;
+          bottom: 160px;
+        }
+      }
+      &--active {
+        opacity: 1;
+        transition: opacity .3s ease-in-out;
       }
     }
-  }
-
-  button {
-    width: 100%;
-    height: 100%;
   }
 }
