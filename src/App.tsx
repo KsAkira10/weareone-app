@@ -4,7 +4,9 @@ import './App.scss';
 
 const App: React.FC = (props: object) => {
   return (
-    <Pages {...props} />
+    <>
+      <Pages {...props} />
+    </>
   );
 }
 

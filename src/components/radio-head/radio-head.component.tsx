@@ -1,24 +1,28 @@
 import React from 'react';
 import './radio-head.component.scss';
+
 export interface IRadioHead {
-  src: string;
+  name: string;
   alt: string;
 };
 
 const getLogo = (name: string): string => {
-  return require(`../../assets/images/logos/${name}.png`);
+  if (name) {
+    return require(`../../assets/images/logos/${name}.png`);
+  }
+  return '';
 };
 
-const RadioHead: React.FC<IRadioHead> = ({ src, alt }) => {
+const RadioHead: React.FC<IRadioHead> = ({ name, alt }) => {
   return (
     <section className="radio-head">
-      <img className="img-fluid mx-auto" src={src} alt={alt} />
+      <img className="img-fluid mx-auto" src={getLogo(name)} alt={alt} />
     </section>
   );
 };
 
 RadioHead.defaultProps = {
-  src: getLogo('technobase'),
+  name: 'technobase',
   alt: 'TechnoBase.FM'
 };
 

@@ -1,19 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
 import RadioHead, { IRadioHead } from '../../components/radio-head/radio-head.component';
 import RadioButtons, { IRadioButtons } from '../../components/radio-buttons/radio-buttons.component';
 
-const Home: React.FC<{ radioHead: IRadioHead, radioButtons: IRadioButtons }> = ({ radioHead, radioButtons }) => (
-	<>
-		<header className="container">
-			<RadioHead {...radioHead} />
-		</header>
-		<main className="container">
-			<RadioButtons {...radioButtons}/>
-		</main>
-		<footer className="container">
+export default class Home extends Component<IRadioHead> {
 
-		</footer>
-	</>
-);
+  state: IRadioHead;
 
-export default Home;
+  constructor(props: IRadioHead) {
+    super(props);
+
+    this.state = {
+      name: 'technobase',
+      alt: 'TechnoBase.FM',
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e: IRadioButtons) {
+    this.setState({
+      name: e.value,
+      alt: e.name,
+    });
+  }
+
+  render() {
+    return (
+      <>
+        <header className="container">
+          <RadioHead {...this.state} />
+        </header>
+        <main className="container">
+          <RadioButtons onChange={this.handleChange} value="technobase" name="TechnoBase.FM" />
+        </main>
+        <footer className="container"></footer>
+      </>
+    );
+  }
+}

@@ -17,6 +17,12 @@
       outline: 0;
       border: 0;
       padding: 0;
+      margin: 0;
+
+      [type=radio] {
+        display: none;
+      }
+
       &--technobase {
         @include media-breakpoint-up(xs) {
           @include background('../../assets/images/circle/circle_tb.png', 42px, 40px);
@@ -24,9 +30,9 @@
           top: 2px;
         }
         @include media-breakpoint-up(sm) { 
-          @include background('../../assets/images/circle/circle_tb.png', 108px, 104px);
-          left: 73px;
-          top: 10px;
+          @include background('../../assets/images/circle/circle_tb.png', 108px, 102px);
+          left: 72px;
+          top: 2px;
         }
       }
       &--hardbase {
@@ -36,9 +42,9 @@
           top: 8px;
         }
         @include media-breakpoint-up(sm) { 
-          @include background('../../assets/images/circle/circle_hb.png', 108px, 104px);
-          left: 73px;
-          top: 10px;
+          @include background('../../assets/images/circle/circle_hb.png', 100px, 110px);
+          left: 78px;
+          top: 20px;
         }
       }
       &--trancebase {
@@ -48,9 +54,9 @@
           top: 40px;
         }
         @include media-breakpoint-up(sm) { 
-          @include background('../../assets/images/circle/circle_trb.png', 108px, 104px);
-          left: 73px;
-          top: 10px;
+          @include background('../../assets/images/circle/circle_trb.png', 96px, 108px);
+          left: 10px;
+          top: 104px;
         }
       }
       &--coretime {
@@ -60,9 +66,9 @@
           top: 30px;
         }
         @include media-breakpoint-up(sm) { 
-          @include background('../../assets/images/circle/circle_ct.png', 108px, 104px);
-          left: 73px;
-          top: 10px;
+          @include background('../../assets/images/circle/circle_ct.png', 106px, 110px);
+          left: 188px;
+          top: 83px
         }
       }
       &--teatime {
@@ -72,9 +78,9 @@
           top: 34px;
         }
         @include media-breakpoint-up(sm) { 
-          @include background('../../assets/images/circle/circle_tt.png', 108px, 104px);
-          left: 73px;
-          top: 10px;
+          @include background('../../assets/images/circle/circle_tt.png', 102px, 100px);
+          right: 28px;
+          top: 92px;
         }
       }
       &--clubtime {
@@ -84,9 +90,9 @@
           top: 16px;
         }
         @include media-breakpoint-up(sm) { 
-          @include background('../../assets/images/circle/circle_clt.png', 108px, 104px);
-          left: 73px;
-          top: 10px;
+          @include background('../../assets/images/circle/circle_clt.png', 108px, 102px);
+          right: 196px;
+          top: 50px;
         }
       }
       &--housetime {
@@ -98,7 +104,7 @@
         @include media-breakpoint-up(sm) { 
           @include background('../../assets/images/circle/circle_ht.png', 104px, 96px);
           left: 10px;
-          bottom: 160px;
+          bottom: 172px;
         }
       }
       &--active {
