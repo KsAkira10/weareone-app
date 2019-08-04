@@ -1,11 +1,10 @@
 .radio {
   &-buttons {
-    @include media-breakpoint-up(xs) { 
-      margin: 60px auto 20px;
-      @include background('assets/images/circle/circle_background.png', 124px, 128px);
-    }
+    margin: 60px auto;
+    @include background('assets/images/circle/circle_background.png', 124px, 128px);
+
     @include media-breakpoint-up(sm) { 
-      margin: 70px auto 20px;
+      margin: 70px auto;
       @include background('assets/images/circle/circle_background.png', 324px, 328px);
     }
   
@@ -109,6 +108,36 @@
         opacity: 1;
         transition: opacity .3s ease-in-out;
       }
+    }
+  }
+}
+
+.player {
+  color: rgb(147, 165, 183);
+  &-button {
+    color: rgb(147, 165, 183);
+
+    label {
+      margin: 0 5px;
+      color: black;
+
+      &.active {
+        color: rgb(147, 165, 183);
+      }
+    }
+
+    [type=radio] {
+      display: none;
+    }
+
+    &--group {
+      margin: 10px 5px;
+      border-left: 2px solid rgb(147, 165, 183);
+      border-right: 2px solid rgb(147, 165, 183);
+    }
+
+    &--bolt {
+      margin: 5px;
     }
   }
 }

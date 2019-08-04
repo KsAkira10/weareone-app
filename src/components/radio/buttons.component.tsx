@@ -33,20 +33,22 @@ export default class RadioButtons extends Component<IRadioButtonsProps, IRadioBu
 
   render() {
     return (
-      <form className="radio-buttons" aria-label="We Are One">
-        {this.props.items.length > 0 && this.props.items.map((item: IRadioButtonsState, index: number) => (
-          <label key={index} htmlFor={item.value} className={`radio-button radio-button--${item.value} ${this.state.value === item.value ? 'radio-button--active' : ''}`}>
-            <input
-              id={item.value}
-              name={item.name}
-              type="radio"
-              value={item.value}
-              checked={this.state.value === item.value}
-              onChange={this.handleChange}
-            />
-          </label>
-        ))}
-      </form>
+      <section className="container">
+        <form className="radio-buttons" aria-label="We Are One">
+          {this.props.items.length > 0 && this.props.items.map((item: IRadioButtonsState, index: number) => (
+            <label key={index} htmlFor={item.value} className={`radio-button radio-button--${item.value} ${this.state.value === item.value ? 'radio-button--active' : ''}`}>
+              <input
+                id={item.value}
+                name={item.name}
+                type="radio"
+                value={item.value}
+                checked={this.state.value === item.value}
+                onChange={this.handleChange}
+              />
+            </label>
+          ))}
+        </form>
+      </section>
     );
   }
 }

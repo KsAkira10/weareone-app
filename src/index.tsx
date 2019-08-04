@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas, faPlay, faPause, faBolt} from '@fortawesome/free-solid-svg-icons'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+library.add(fas, faPlay, faPause, faBolt);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

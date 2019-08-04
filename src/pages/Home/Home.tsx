@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RadioHead, { IRadioHeadProps } from '../../components/radio/head.component';
 import RadioButtons, { IRadioButtonsProps, IRadioButtonsState } from '../../components/radio/buttons.component';
+import RadioPlayer from '../../components/radio/player.component';
 
 interface IHomeState {
   radioHead?: IRadioHeadProps;
@@ -67,12 +68,10 @@ export default class Home extends Component<IHomeProps, IHomeState> {
           <RadioHead {...this.state.radioHead} />
         </header>
         <main className="container">
-          <section>
+          <article>
             <RadioButtons onChange={this.handleChange} items={this.state.radioButtons.items} />
-          </section>
-          <section>
-            player
-          </section>
+            <RadioPlayer />
+          </article>
         </main>
         <footer className="container"></footer>
       </>
