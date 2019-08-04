@@ -1,14 +1,12 @@
-@import '../../styles/styles';
-
 .radio {
   &-buttons {
     @include media-breakpoint-up(xs) { 
       margin: 60px auto 20px;
-      @include background('../../assets/images/circle/circle_background.png', 124px, 128px);
+      @include background('assets/images/circle/circle_background.png', 124px, 128px);
     }
     @include media-breakpoint-up(sm) { 
       margin: 70px auto 20px;
-      @include background('../../assets/images/circle/circle_background.png', 324px, 328px);
+      @include background('assets/images/circle/circle_background.png', 324px, 328px);
     }
   
     .radio-button {
@@ -25,84 +23,84 @@
 
       &--technobase {
         @include media-breakpoint-up(xs) {
-          @include background('../../assets/images/circle/circle_tb.png', 42px, 40px);
+          @include background('assets/images/circle/circle_tb.png', 42px, 40px);
           left: 29px;
           top: 2px;
         }
         @include media-breakpoint-up(sm) { 
-          @include background('../../assets/images/circle/circle_tb.png', 108px, 102px);
+          @include background('assets/images/circle/circle_tb.png', 108px, 102px);
           left: 72px;
           top: 2px;
         }
       }
       &--hardbase {
         @include media-breakpoint-up(xs) {
-          @include background('../../assets/images/circle/circle_hb.png', 40px, 42px);
+          @include background('assets/images/circle/circle_hb.png', 40px, 42px);
           left: 31px;
           top: 8px;
         }
         @include media-breakpoint-up(sm) { 
-          @include background('../../assets/images/circle/circle_hb.png', 100px, 110px);
+          @include background('assets/images/circle/circle_hb.png', 100px, 110px);
           left: 78px;
           top: 20px;
         }
       }
       &--trancebase {
         @include media-breakpoint-up(xs) {
-          @include background('../../assets/images/circle/circle_trb.png', 36px, 40px);
+          @include background('assets/images/circle/circle_trb.png', 36px, 40px);
           left: 4px;
           top: 40px;
         }
         @include media-breakpoint-up(sm) { 
-          @include background('../../assets/images/circle/circle_trb.png', 96px, 108px);
+          @include background('assets/images/circle/circle_trb.png', 96px, 108px);
           left: 10px;
           top: 104px;
         }
       }
       &--coretime {
         @include media-breakpoint-up(xs) {
-          @include background('../../assets/images/circle/circle_ct.png', 40px, 42px);
+          @include background('assets/images/circle/circle_ct.png', 40px, 42px);
           left: 74px;
           top: 30px;
         }
         @include media-breakpoint-up(sm) { 
-          @include background('../../assets/images/circle/circle_ct.png', 106px, 110px);
+          @include background('assets/images/circle/circle_ct.png', 106px, 110px);
           left: 188px;
           top: 83px
         }
       }
       &--teatime {
         @include media-breakpoint-up(xs) {
-          @include background('../../assets/images/circle/circle_tt.png', 40px, 38px);
+          @include background('assets/images/circle/circle_tt.png', 40px, 38px);
           right: 10px;
           top: 34px;
         }
         @include media-breakpoint-up(sm) { 
-          @include background('../../assets/images/circle/circle_tt.png', 102px, 100px);
+          @include background('assets/images/circle/circle_tt.png', 102px, 100px);
           right: 28px;
           top: 92px;
         }
       }
       &--clubtime {
         @include media-breakpoint-up(xs) {
-          @include background('../../assets/images/circle/circle_clt.png', 42px, 38px);
+          @include background('assets/images/circle/circle_clt.png', 42px, 38px);
           right: 75px;
           top: 16px;
         }
         @include media-breakpoint-up(sm) { 
-          @include background('../../assets/images/circle/circle_clt.png', 108px, 102px);
+          @include background('assets/images/circle/circle_clt.png', 108px, 102px);
           right: 196px;
           top: 50px;
         }
       }
       &--housetime {
         @include media-breakpoint-up(xs) {
-          @include background('../../assets/images/circle/circle_ht.png', 40px, 38px);
+          @include background('assets/images/circle/circle_ht.png', 40px, 38px);
           left: 4px;
           bottom: 72px;
         }
         @include media-breakpoint-up(sm) { 
-          @include background('../../assets/images/circle/circle_ht.png', 104px, 96px);
+          @include background('assets/images/circle/circle_ht.png', 104px, 96px);
           left: 10px;
           bottom: 172px;
         }

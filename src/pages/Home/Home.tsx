@@ -1,26 +1,62 @@
 import React, { Component } from 'react';
-import RadioHead, { IRadioHead } from '../../components/radio-head/radio-head.component';
-import RadioButtons, { IRadioButtons } from '../../components/radio-buttons/radio-buttons.component';
+import RadioHead, { IRadioHeadProps } from '../../components/radio/head.component';
+import RadioButtons, { IRadioButtonsProps, IRadioButtonsState } from '../../components/radio/buttons.component';
 
-export default class Home extends Component<IRadioHead> {
+interface IHomeState {
+  radioHead?: IRadioHeadProps;
+  radioButtons: IRadioButtonsProps;
+}
 
-  state: IRadioHead;
+interface IHomeProps { }
 
-  constructor(props: IRadioHead) {
+export default class Home extends Component<IHomeProps, IHomeState> {
+  state: IHomeState = {
+    radioButtons: {
+      items: [
+        {
+          name: 'TechnoBase.FM',
+          value: 'technobase',
+        },
+        {
+          name: 'HardBase.FM',
+          value: 'hardbase',
+        },
+        {
+          name: 'TranceBase.FM',
+          value: 'trancebase',
+        },
+        {
+          name: 'CoreTime.FM',
+          value: 'coretime',
+        },
+        {
+          name: 'TeaTime.FM',
+          value: 'teatime',
+        },
+        {
+          name: 'ClubTime.FM',
+          value: 'clubtime',
+        },
+        {
+          name: 'HouseTime.FM',
+          value: 'housetime',
+        },
+      ]
+    }
+  };
+
+  constructor(props: IHomeProps) {
     super(props);
-
-    this.state = {
-      name: 'technobase',
-      alt: 'TechnoBase.FM',
-    };
 
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e: IRadioButtons) {
+  handleChange(e: IRadioButtonsState) {
     this.setState({
-      name: e.value,
-      alt: e.name,
+      radioHead: {
+        name: e.value,
+        alt: e.name,
+      },
     });
   }
 
@@ -28,10 +64,15 @@ export default class Home extends Component<IRadioHead> {
     return (
       <>
         <header className="container">
-          <RadioHead {...this.state} />
+          <RadioHead {...this.state.radioHead} />
         </header>
         <main className="container">
-          <RadioButtons onChange={this.handleChange} value="technobase" name="TechnoBase.FM" />
+          <section>
+            <RadioButtons onChange={this.handleChange} items={this.state.radioButtons.items} />
+          </section>
+          <section>
+            player
+          </section>
         </main>
         <footer className="container"></footer>
       </>
