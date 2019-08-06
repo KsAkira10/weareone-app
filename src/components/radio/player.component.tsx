@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const RadioPlayer: React.FC = () => {
   const [play, setPlay] = useState(true);
   const [bolt, setBolt] = useState('low');
-  const handleClick = () => {
+  const handlePlayerControllerClick = () => {
     if (play) {
       setPlay(false);
       return;
@@ -17,31 +17,33 @@ const RadioPlayer: React.FC = () => {
   };
   return (
     <section className="radio-player__container">
-      <header className="radio-player__header">
-        <aside></aside>
-      </header>
-      <footer className="radio-player__footer d-flex align-middle justify-content-around">
-        <div className="d-flex player-button" >
-          <button type="button" className="player-button" onClick={handleClick}>
+      <main className="radio-player__main">
+        <header className="radio-player__header">
+          <aside></aside>
+        </header>
+      </main>
+      <footer className="radio-player__footer d-flex align-items-center justify-content-around">
+        <div className="player-button d-flex" >
+          <button type="button" className="player-button" onClick={handlePlayerControllerClick}>
             <FontAwesomeIcon icon={play ? 'play' : 'pause'} />
           </button>
         </div>
-        <div className="d-flex align-middle justify-content-between player-button player-button--group">
-          <label htmlFor="low" className={`d-flex ${bolt === 'low' && 'active'}`}>
+        <div className="player-button player-button--group d-flex align-items-center justify-content-between">
+          <label htmlFor="low" className={`${bolt === 'low' && 'active'} d-flex`}>
             <input type="radio" name="low" id="low" value="low" checked={bolt === 'low'} onChange={handleChange} />
             LOW
           </label>
-          <div className="d-flex player-button player-button--bolt">
+          <div id="bolt" className="player-button player-button--bolt d-flex">
             <FontAwesomeIcon icon="bolt" />
           </div>
-          <label htmlFor="high" className={`d-flex ${bolt === 'high' && 'active'}`}>
+          <label htmlFor="high" className={`${bolt === 'high' && 'active'} d-flex`}>
             <input type="radio" name="high" id="high" value="high" checked={bolt === 'high'} onChange={handleChange} />
             HIGH
           </label>
         </div>
-        <div className="d-flex player-button" >
+        <div className="player-button d-flex" >
           <button type="button" className="player-button">
-            Greeting
+            <span>Greeting</span>
           </button>
         </div>
       </footer>
