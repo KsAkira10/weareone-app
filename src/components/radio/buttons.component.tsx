@@ -1,8 +1,8 @@
 import React, { Component, ChangeEvent } from 'react';
 
 export interface IRadioButtonsState {
+  label?: string;
   name?: string;
-  value?: string;
 }
 
 export interface IRadioButtonsProps extends IRadioButtonsState {
@@ -17,15 +17,15 @@ export default class RadioButtons extends Component<IRadioButtonsProps, IRadioBu
     super(props);
 
     this.state = {
-      value: props.value || 'technobase',
-      name: props.name || 'TechnoBase.FM',
+      name: props.name || 'technobase',
+      label: props.label || 'TechnoBase.FM',
     };
 
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event: ChangeEvent<HTMLInputElement>) {
-    const state = { value: event.target.value, name: event.target.name };
+    const state = { name: event.target.value, label: event.target.name };
     this.setState({ ...state });
 
     this.props.onChange({ ...state });
@@ -36,13 +36,13 @@ export default class RadioButtons extends Component<IRadioButtonsProps, IRadioBu
       <section className="container">
         <form className="radio-buttons" aria-label="We Are One">
           {this.props.items.length > 0 && this.props.items.map((item: IRadioButtonsState, index: number) => (
-            <label key={index} htmlFor={item.value} className={`radio-button radio-button--${item.value} ${this.state.value === item.value ? 'radio-button--active' : ''}`}>
+            <label key={index} htmlFor={item.name} className={`radio-button radio-button--${item.name} ${this.state.name === item.name ? 'radio-button--active' : ''}`}>
               <input
-                id={item.value}
-                name={item.name}
+                id={item.name}
+                name={item.label}
                 type="radio"
-                value={item.value}
-                checked={this.state.value === item.value}
+                value={item.name}
+                checked={this.state.name === item.name}
                 onChange={this.handleChange}
               />
             </label>

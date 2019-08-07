@@ -1,0 +1,87 @@
+{
+  "streams": [
+    {
+      "label": "TechnoBase.FM",
+      "name": "technobase",
+      "high": "http://mp3.stream.tb-group.fm/tb.mp3",
+      "low": "http://aacl.stream.tb-group.fm/tb-low.aac",
+      "live": true,
+      "radio_id": 5,
+      "style": "Dance / Hands Up",
+      "url": "http://TechnoBase.FM"
+    },
+    {
+      "label": "HardBase.FM",
+      "name": "hardbase",
+      "high": "http://mp3.stream.tb-group.fm/hb.mp3",
+      "low": "http://aacl.stream.tb-group.fm/hb-low.aac",
+      "live": true,
+      "radio_id": 7,
+      "style": "Hardstyle",
+      "url": "http://HardBase.FM"
+    },
+    {
+      "label": "TranceBase.FM",
+      "name": "trancebase",
+      "high": "http://mp3.stream.tb-group.fm/trb.mp3",
+      "low": "http://aacl.stream.tb-group.fm/trb-low.aac",
+      "live": true,
+      "radio_id": 8,
+      "style": "Vocal & Uplifting Trance",
+      "url": "http://TranceBase.FM"
+    },
+    {
+      "label": "CoreTime.FM",
+      "name": "coretime",
+      "high": "http://mp3.stream.tb-group.fm/ct.mp3",
+      "low": "http://aacl.stream.tb-group.fm/ct-low.aac",
+      "live": true,
+      "radio_id": 10,
+      "style": "Hardcore",
+      "url": "http://CoreTime.FM"
+    },
+    {
+      "label": "TeaTime.FM",
+      "name": "teatime",
+      "high": "http://mp3.stream.tb-group.fm/tt.mp3",
+      "low": "http://aacl.stream.tb-group.fm/tt-low.aac",
+      "live": true,
+      "radio_id": 13,
+      "style": "Happy Hardcore / DnB",
+      "url": "http://TeaTime.FM"
+    },
+    {
+      "label": "ClubTime.FM",
+      "name": "clubtime",
+      "high": "http://mp3.stream.tb-group.fm/clt.mp3",
+      "low": "http://aacl.stream.tb-group.fm/clt-low.aac",
+      "live": true,
+      "radio_id": 11,
+      "style": "Techno / Minimal",
+      "url": "http://ClubTime.FM"
+    },
+    
+    {
+      "label": "HouseTime.FM",
+      "name": "housetime",
+      "high": "http://mp3.stream.tb-group.fm/ht.mp3",
+      "low": "http://aacl.stream.tb-group.fm/ht-low.aac",
+      "live": true,
+      "radio_id": 6,
+      "style": "House",
+      "url": "http://HouseTime.FM"
+    }
+  ],
+  "parameters": {
+    "dynamic_mode": true,
+    "active_metadata": {
+      "live": true
+    },
+    "volume": 1
+  },
+  "qualities": [
+    "high",
+    "low"
+  ],
+  "api_url": "https://api.tb-group.fm/"
+}

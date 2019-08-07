@@ -1,49 +1,35 @@
 import React, { Component } from 'react';
 import RadioHead, { IRadioHeadProps } from '../../components/radio/head.component';
 import RadioButtons, { IRadioButtonsProps, IRadioButtonsState } from '../../components/radio/buttons.component';
-import RadioPlayer from '../../components/radio/player.component';
+import RadioPlayer, { IRadioPlayerProps } from '../../components/radio/player.component';
+
+import Config from './../../config/config.json';
 
 interface IHomeState {
-  radioHead?: IRadioHeadProps;
+  radioHead: IRadioHeadProps;
   radioButtons: IRadioButtonsProps;
+  audioSelected: IRadioPlayerProps;
 }
 
 interface IHomeProps { }
 
 export default class Home extends Component<IHomeProps, IHomeState> {
+  streams = (JSON.parse(JSON.stringify(Config))).streams;
+  stream = this.streams[0];
   state: IHomeState = {
+    radioHead: {
+      name: this.stream.name,
+      alt: this.stream.label,
+    },
     radioButtons: {
-      items: [
-        {
-          name: 'TechnoBase.FM',
-          value: 'technobase',
-        },
-        {
-          name: 'HardBase.FM',
-          value: 'hardbase',
-        },
-        {
-          name: 'TranceBase.FM',
-          value: 'trancebase',
-        },
-        {
-          name: 'CoreTime.FM',
-          value: 'coretime',
-        },
-        {
-          name: 'TeaTime.FM',
-          value: 'teatime',
-        },
-        {
-          name: 'ClubTime.FM',
-          value: 'clubtime',
-        },
-        {
-          name: 'HouseTime.FM',
-          value: 'housetime',
-        },
-      ]
-    }
+      items: [...this.streams],
+    },
+    audioSelected: {
+      source: {
+        high: this.stream.high,
+        low: this.stream.low,
+      }
+    },
   };
 
   constructor(props: IHomeProps) {
@@ -53,12 +39,22 @@ export default class Home extends Component<IHomeProps, IHomeState> {
   }
 
   handleChange(e: IRadioButtonsState) {
-    this.setState({
-      radioHead: {
-        name: e.value,
-        alt: e.name,
-      },
-    });
+    this.streams.forEach((stream: { name: string, low: string, high: string }) => {
+      if(stream.name === e.name) {
+        this.setState({
+          radioHead: {
+            name: e.name,
+            alt: e.label,
+          },
+          audioSelected: {
+            source: {
+              high: stream.high,
+              low: stream.low,
+            }
+          },
+        });
+      }
+    });    
   }
 
   render() {
@@ -70,7 +66,7 @@ export default class Home extends Component<IHomeProps, IHomeState> {
         <main className="container">
           <article>
             <RadioButtons onChange={this.handleChange} items={this.state.radioButtons.items} />
-            <RadioPlayer />
+            <RadioPlayer source={this.state.audioSelected.source} />
           </article>
         </main>
         <footer className="container"></footer>

@@ -1,20 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const RadioPlayer: React.FC = () => {
+export interface IRadioPlayerProps {
+  source: {
+    high: string;
+    low: string;
+  };
+}
+
+const RadioPlayer: React.FC<IRadioPlayerProps> = ({ source }) => {
   const [play, setPlay] = useState(true);
   const [bolt, setBolt] = useState('low');
+
+  useEffect(() => {
+    const player = document.getElementById('player') as HTMLAudioElement;
+    const source = document.getElementById(`source-${bolt}`) as HTMLSourceElement;
+    player.src = source.src;
+    player.load();
+    setPlay(true);
+  }, [source, bolt]);
+
   const handlePlayerControllerClick = () => {
+    const player = document.getElementById('player') as HTMLAudioElement;
     if (play) {
-      setPlay(false);
+      player
+        .play()
+        .then(() => {
+          setPlay(false);
+        })
+        .catch((error) => {
+          setPlay(true);
+          console.error(error);
+        });
       return;
     }
-
+    player.pause();
     setPlay(true);
   };
+
   const handleChange = (e: any) => {
+    const player = document.getElementById('player') as HTMLAudioElement;
+    const source = document.getElementById(`source-${e.target.value}`) as HTMLSourceElement;
+    player.src = source.src;
+    player.load();
+    setPlay(true);
     setBolt(e.target.value);
   };
+
   return (
     <section className="radio-player__container">
       <main className="radio-player__main">
@@ -23,6 +55,11 @@ const RadioPlayer: React.FC = () => {
         </header>
       </main>
       <footer className="radio-player__footer d-flex align-items-center justify-content-around">
+        <audio id="player">
+          <source src={source.low} type="audio/ogg" id="source-low" />
+          <source src={source.high} type="audio/mpeg" id="source-high" />
+          Your browser does not support the audio element.
+        </audio>
         <div className="player-button d-flex" >
           <button type="button" className="player-button" onClick={handlePlayerControllerClick}>
             <FontAwesomeIcon icon={play ? 'play' : 'pause'} />
