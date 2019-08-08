@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "068189bb614cd8209fb6e1dcfc209694",
+    "revision": "bd3af123295eb80e7c7c90b9166792a8",
     "url": "/weareone-app/index.html"
   },
   {
