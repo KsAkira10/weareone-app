@@ -1,12 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './Home/Home';
 
 const Pages: React.FC = () => {
   return (
-    <Router>
-      <Route exact path="/" component={Home} />
-    </Router>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route component={() => (<h1>404 Not Found</h1>)} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 

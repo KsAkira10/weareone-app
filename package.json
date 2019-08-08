@@ -3,7 +3,7 @@
   "description": "made by fan with ❤️",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/weareone-app",
+  "homepage": "https://ksakira10.github.io/weareone-app",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.21",
     "@fortawesome/free-solid-svg-icons": "^5.10.1",
