@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/weareone-app/static/css/main.59173cd6.chunk.css",
-    "main.js": "/weareone-app/static/js/main.a81694d3.chunk.js",
-    "main.js.map": "/weareone-app/static/js/main.a81694d3.chunk.js.map",
+    "main.js": "/weareone-app/static/js/main.7e8999bc.chunk.js",
+    "main.js.map": "/weareone-app/static/js/main.7e8999bc.chunk.js.map",
     "runtime~main.js": "/weareone-app/static/js/runtime~main.5ead23e2.js",
     "runtime~main.js.map": "/weareone-app/static/js/runtime~main.5ead23e2.js.map",
     "static/js/2.2936288c.chunk.js": "/weareone-app/static/js/2.2936288c.chunk.js",
     "static/js/2.2936288c.chunk.js.map": "/weareone-app/static/js/2.2936288c.chunk.js.map",
     "index.html": "/weareone-app/index.html",
-    "precache-manifest.9d8051a8f808d9426787010b89abeed7.js": "/weareone-app/precache-manifest.9d8051a8f808d9426787010b89abeed7.js",
+    "precache-manifest.6bade6fbe716bea19509434ac2d36b80.js": "/weareone-app/precache-manifest.6bade6fbe716bea19509434ac2d36b80.js",
     "service-worker.js": "/weareone-app/service-worker.js",
     "static/css/main.59173cd6.chunk.css.map": "/weareone-app/static/css/main.59173cd6.chunk.css.map",
     "static/media/index.scss": "/weareone-app/static/media/circle_tt.3ba6db1a.png",
@@ -16,6 +16,7 @@
     "static/media/coretime.png": "/weareone-app/static/media/coretime.3aa1ce40.png",
     "static/media/hardbase.png": "/weareone-app/static/media/hardbase.dd304781.png",
     "static/media/housetime.png": "/weareone-app/static/media/housetime.f1926c26.png",
+    "static/media/launcher.png": "/weareone-app/static/media/launcher.acbeaca4.png",
     "static/media/teatime.png": "/weareone-app/static/media/teatime.18e205fd.png",
     "static/media/technobase.png": "/weareone-app/static/media/technobase.1a2a7dba.png",
     "static/media/trancebase.png": "/weareone-app/static/media/trancebase.382c95e9.png"

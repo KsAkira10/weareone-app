@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bd3af123295eb80e7c7c90b9166792a8",
+    "revision": "d6418b80777653be2ff1b923362ed557",
     "url": "/weareone-app/index.html"
   },
   {
-    "revision": "bfb99262830d72d2614b",
+    "revision": "c1241a1436cd7ad1f04f",
     "url": "/weareone-app/static/css/main.59173cd6.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/weareone-app/static/js/2.2936288c.chunk.js"
   },
   {
-    "revision": "bfb99262830d72d2614b",
-    "url": "/weareone-app/static/js/main.a81694d3.chunk.js"
+    "revision": "c1241a1436cd7ad1f04f",
+    "url": "/weareone-app/static/js/main.7e8999bc.chunk.js"
   },
   {
     "revision": "e0fd6a683b2f6be2111d",
@@ -70,6 +70,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f1926c268c3dd68279cbdef86b433117",
     "url": "/weareone-app/static/media/housetime.f1926c26.png"
+  },
+  {
+    "revision": "acbeaca4b8fcfad60e988d42589eee49",
+    "url": "/weareone-app/static/media/launcher.acbeaca4.png"
   },
   {
     "revision": "18e205fdda40625cfbbd94555fdd171d",
