@@ -5,6 +5,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas, faPlay, faPause, faBolt} from '@fortawesome/free-solid-svg-icons'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './assets/images/circle/launcher.png';
 
 library.add(fas, faPlay, faPause, faBolt);
 
